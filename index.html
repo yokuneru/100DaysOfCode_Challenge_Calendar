@@ -1,1 +1,55 @@
-test
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>100DaysOfCode Tweet</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <p>100DaysOfCode</p>
+    <p>Tweet Button</p>
+    <p><span>1</span>日目</p>
+
+    <input type="text" id="comment" placeholder="">
+    <input type="submit" id="btn">
+    <p id="confirm">文字の変更を反映</p>
+
+    <div>
+      <a
+        class="twitter-share-button"
+        href="https://twitter.com/intent/tweet"
+        data-text="test"
+        data-hashtags="100DaysOfCode">
+      Tweet
+      </a>
+    </div>
+
+    <!-- Twitter official script -->
+    <script>
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://platform.twitter.com/widgets.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document, 'script', 'twitter-wjs');
+    </script>
+    <!-- end -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      var twBtn = document.getElementsByClassName("twitter-share-button");
+
+      twBtn.setAttribute('data-text', 'wow');
+      twBtn.dataset.text = 'wow';
+    </script>
+  </body>
+
+</html>

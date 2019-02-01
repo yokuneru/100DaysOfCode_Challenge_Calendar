@@ -19,10 +19,10 @@ $(function(){
 
   if($.cookie("visitCnt") == undefined){
     console.log(1);
-    $.cookie("visitCnt") = 1;
+    $.cookie("visitCnt", 1);
 
   }else{
-    $.cookie("visitCnt") + 1;
+    $.cookie("visitCnt") += 1;
     console.log($.cookie("visitCnt"));
   }
 

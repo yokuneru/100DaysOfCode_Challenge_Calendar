@@ -17,14 +17,14 @@ $(function(){
   });
 
 
-  $(document).mousedown(function(){
-    $.cookie("visit", "hey", {expires: 7});
-    var visCnt = $.cookie("visit");
-    console.log(visCnt);
-  });
+  if($.cookie("visitCnt") == undefined){
+    console.log(1);
+    $.cookie("visitCnt") = 1;
 
-
-
+  }else{
+    $.cookie("visitCnt") + 1;
+    console.log($.cookie("visitCnt"));
+  }
 
 
 });

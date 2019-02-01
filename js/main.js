@@ -18,10 +18,17 @@ $(function(){
 
   if($.cookie("visitCnt") == undefined){
     console.log(1);
+<<<<<<< HEAD
     $.cookie("visitCnt", 1, {expires: 30});
   }else{
     var cnt = $.cookie("visitCnt");
     $.cookie("visitCnt", cnt + 1, {expires: 30});
+=======
+    $.cookie("visitCnt", 1);
+
+  }else{
+    $.cookie("visitCnt") += 1;
+>>>>>>> daa469cf1e77a6392cd4f6991d5249ccd70286f4
     console.log($.cookie("visitCnt"));
   }
 

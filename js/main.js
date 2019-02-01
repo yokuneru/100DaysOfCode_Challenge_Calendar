@@ -16,15 +16,13 @@ $(function(){
     // console.log( $("#twBtn").attr("href") );
   });
 
-
   if($.cookie("visitCnt") == undefined){
     console.log(1);
-    $.cookie("visitCnt") = 1;
-
+    $.cookie("visitCnt", 1, {expires: 30});
   }else{
-    $.cookie("visitCnt") + 1;
+    var cnt = $.cookie("visitCnt");
+    $.cookie("visitCnt", cnt + 1, {expires: 30});
     console.log($.cookie("visitCnt"));
   }
-
 
 });

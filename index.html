@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>100DaysOfCode Challenge Calendar</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
@@ -49,7 +50,10 @@
           <footer>
             <div class="utility-nav">
               <ul>
-                <li class="utility-btn"><a href="https://twitter.com/search?q=%23100DaysOfCode&src=typd&lang=ja" target="_blank">Our friend</a></li>    <li class="utility-btn"><a href="#" target="_blank">Share</a></li>
+                <li class="utility-btn"><a href="https://twitter.com/search?q=%23100DaysOfCode&src=typd&lang=ja" target="_blank">Our friend</a></li>
+
+                <li class="utility-btn"><a href="https://twitter.com/share?&url=https://yokuneru.github.io/100DaysOfCode_Challenge_Calendar/&hashtags=100DaysOfCode" target="_blank">Share</a></li>
+
                 <li class="utility-btn"><a href="https://twitter.com/yokuneru_gs" target="_blank">Developer</a></li>
               </ul>
             </div>
@@ -81,17 +85,19 @@
             <p>前回の学習：<span id="lastAccess">○○</span></p>
           </div>
 
+          
           <div class="textarea">
             <textarea type="text" class="comment" id="comment"></textarea>
             <p id="textCnt">280</p>
           </div>
 
-          <!-- twitter script -->
-          <div class="tw-btn-wrap">
-            <a id="tw-btn" href="" class="twitter-hashtag-button" data-show-count="false"></a>
+          <!-- tweet! -->
+          <div id="tw-btn">
+            <i class="fab fa-twitter"></i>
+            <p>ツイート</p>
           </div>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <!-- end -->
+          <a id="tw" href="#">ついーと</a>
+
 
           <div class="option-nav">
             <div class="option-btn" id="modify">日数を修正する</div>
@@ -101,7 +107,10 @@
           <footer>
             <div class="utility-nav">
               <ul>
-                <li class="utility-btn"><a href="https://twitter.com/search?q=%23100DaysOfCode&src=typd&lang=ja" target="_blank">Our friend</a></li>    <li class="utility-btn"><a href="#" target="_blank">Share</a></li>
+                <li class="utility-btn"><a href="https://twitter.com/search?q=%23100DaysOfCode&src=typd&lang=ja" target="_blank">Our friend</a></li>
+
+                <li class="utility-btn"><a href="https://twitter.com/share?&url=https://yokuneru.github.io/100DaysOfCode_Challenge_Calendar/&hashtags=100DaysOfCode" target="_blank">Share</a></li>
+
                 <li class="utility-btn"><a href="https://twitter.com/yokuneru_gs" target="_blank">Developer</a></li>
               </ul>
             </div>

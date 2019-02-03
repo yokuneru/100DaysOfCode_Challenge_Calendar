@@ -171,6 +171,10 @@ input[type="number"] {
   font-weight: bold;
 }
 
+#start-date, #lastAccess{
+  letter-spacing: 1px;
+}
+
 .lastAccess {
   margin-top: 4px;
   font-size: 12px;
@@ -182,10 +186,12 @@ input[type="number"] {
   padding: 6px;
   border: 1px solid gray;
   margin-top: 50px;
+  margin-bottom: 10px;
   width: 300px;
   height: 40px;
   font-size: 16px;
   transition: 600ms ease;
+  resize: none;
 }
 
 .comment-anm {
@@ -203,12 +209,28 @@ textarea[type="text"] {
   display: inline;
 }
 
-#start-date {
-  letter-spacing: 1px;
+#tw-btn {
+  margin: 0 auto;
+  width: 75px;
+  height: 22px;
+  line-height: 20px;
+  border-radius: 3px;
+  border: none;
+  background: #1b95e0;
+  cursor: pointer;
 }
 
-.tw-btn-wrap {
-  margin-top: 10px;
+.fab {
+  color: #fff;
+  font-size: 13px;
+}
+
+#tw-btn p{
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .option-nav {
@@ -272,5 +294,5 @@ textarea[type="text"] {
 
 /* 開発検証用 */
 div {
-  /* border: 0.5px solid gray; */
+  border: 0.5px solid gray;
 }

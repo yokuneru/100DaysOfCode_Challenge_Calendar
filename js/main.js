@@ -5,7 +5,6 @@ $(function(){
   var today;
 
   //ローカルストレージ記録の取得
-  var isChallenger = localStorage.getItem("isChallenger")
   var dayCnt = localStorage.getItem("dayCnt");
   var startDate = localStorage.getItem("startDate");
   var lastAccess = localStorage.getItem("lastAccess");
@@ -44,7 +43,6 @@ $(function(){
       $("#comment").text(" #100DaysOfCode #Day" + dayCnt)
       $("#start-date").text(today);
       $(".lastAccess").css("visibility", "hidden");
-      // localStorage.setItem("isChallenger", "challenger");
       localStorage.setItem("dayCnt", dayCnt);
       localStorage.setItem("startDate", today);
       localStorage.setItem("lastAccess", today);
@@ -82,7 +80,6 @@ $(function(){
         $("#comment").text(" #100DaysOfCode #Day" + dayCnt)
         $(".startDate").css("visibility", "hidden");
         $(".lastAccess").css("visibility", "hidden");
-        // localStorage.setItem("isChallenger", "challenger");
         localStorage.setItem("dayCnt", dayCnt);
         localStorage.setItem("lastAccess", today);
         showLog();
@@ -118,7 +115,7 @@ $(function(){
   $("#comment").on("click change keyup", function(){
     $(this).addClass("comment-anm");
 
-    var comment = $(this).val();
+    // var comment = document.fm.comment.value;
     $("#textCnt").text(280 - comment.length);
     if(comment.length < 270){
       $("#textCnt").css("color", "rgb(150, 150, 150)")
@@ -130,7 +127,21 @@ $(function(){
 
   });
 
-  $("#tw-btn").attr("href", "https://twitter.com/intent/tweet?text=" + comment + "&hashtags=" + "100DaysOfCode," + "Day" + dayCnt);
+  // $("#tw-btn").click(function(){
+  //   window.location.href = "https://twitter.com/intent/tweet?text=" + "" + comment;
+  // });
+
+  // $("#tw").click(function(){
+  //   $("#tw").attr("href", "https://twitter.com/intent/tweet?text=" + comment);
+  // });
+
+  $(document).click(function(){
+    $("#tw").text("https://twitter.com/intent/tweet?text=" + comment);
+
+    console.log(comment);
+    console.log("コメントは" + comment + "です");
+  });
+
 
 
   //学習日数の修正
@@ -152,7 +163,6 @@ $(function(){
   $("#graduate").click(function(){
     if(confirm("100DaysOfCodeチャレンジを終了しますか？")){
       alert(dayCnt + "日間チャレンジお疲れ様でした！");
-      // localStorage.removeItem("isChallenger");
       localStorage.removeItem("dayCnt");
       localStorage.removeItem("startDate");
       localStorage.removeItem("lastAccess");
@@ -166,7 +176,6 @@ $(function(){
   $(document).on("keypress", function(e){
     if(e.keyCode == 101){
       //Rキー 記録削除
-      // localStorage.removeItem("isChallenger");
       localStorage.removeItem("dayCnt");
       localStorage.removeItem("startDate");
       localStorage.removeItem("lastAccess");
@@ -180,7 +189,6 @@ $(function(){
   });
 
   function showLog(){
-    // console.log("isChallenger = " + localStorage.getItem("isChallenger"));
     console.log("dayCnt = " + localStorage.getItem("dayCnt"));
     console.log("startDate = " + localStorage.getItem("startDate"));
     console.log("lastAccess = " + localStorage.getItem("lastAccess"));

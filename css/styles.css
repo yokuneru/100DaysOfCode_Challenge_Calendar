@@ -225,7 +225,7 @@ textarea[type="text"] {
   font-size: 13px;
 }
 
-#tw-btn p{
+#tw-btn a{
   display: inline;
   color: #fff;
   text-decoration: none;
@@ -294,5 +294,5 @@ textarea[type="text"] {
 
 /* 開発検証用 */
 div {
-  border: 0.5px solid gray;
+  /* border: 0.5px solid gray; */
 }

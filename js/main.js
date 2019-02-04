@@ -40,13 +40,12 @@ $(function(){
 
       dayCnt = 1;
       $("#dayCnt").text(dayCnt);
-      $("#comment").text(" #100DaysOfCode #Day" + dayCnt)
+      $(".comment").text("Day" + dayCnt + " #100DaysOfCode")
       $("#start-date").text(today);
       $(".lastAccess").css("visibility", "hidden");
       localStorage.setItem("dayCnt", dayCnt);
       localStorage.setItem("startDate", today);
       localStorage.setItem("lastAccess", today);
-      showLog(); //開発用
     });
 
 
@@ -77,7 +76,7 @@ $(function(){
         $("#view-frame").animate({scrollTop:target}, 400, "swing");
 
         $("#dayCnt").text(dayCnt);
-        $("#comment").text(" #100DaysOfCode #Day" + dayCnt)
+        $(".comment").text("Day" + dayCnt + " #100DaysOfCode")
         $(".startDate").css("visibility", "hidden");
         $(".lastAccess").css("visibility", "hidden");
         localStorage.setItem("dayCnt", dayCnt);
@@ -100,7 +99,7 @@ $(function(){
       showLog();
     }
     $("#dayCnt").text(dayCnt);
-    $("#comment").text(" #100DaysOfCode #Day" + dayCnt)
+    $(".comment").text("Day" + dayCnt + " #100DaysOfCode")
 
     //開始日の表示設定
     if(startDate == undefined){
@@ -112,10 +111,10 @@ $(function(){
 
 
   //コメントの入力
-  $("#comment").on("click change keyup", function(){
+  $(".comment").on("click change keyup", function(){
     $(this).addClass("comment-anm");
 
-    // var comment = document.fm.comment.value;
+    var comment = document.fm.tarea.value;
     $("#textCnt").text(280 - comment.length);
     if(comment.length < 270){
       $("#textCnt").css("color", "rgb(150, 150, 150)")
@@ -125,21 +124,7 @@ $(function(){
       $("#textCnt").css("color", "rgb(200, 60, 60)")
     }
 
-  });
-
-  // $("#tw-btn").click(function(){
-  //   window.location.href = "https://twitter.com/intent/tweet?text=" + "" + comment;
-  // });
-
-  // $("#tw").click(function(){
-  //   $("#tw").attr("href", "https://twitter.com/intent/tweet?text=" + comment);
-  // });
-
-  $(document).click(function(){
-    $("#tw").text("https://twitter.com/intent/tweet?text=" + comment);
-
-    console.log(comment);
-    console.log("コメントは" + comment + "です");
+    $("#tw-btn a").attr("href", "https://twitter.com/intent/tweet?hashtags=100DaysOfCode&text=" + comment);
   });
 
 

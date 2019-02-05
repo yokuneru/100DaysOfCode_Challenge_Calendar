@@ -216,17 +216,30 @@ textarea[type="text"] {
   line-height: 20px;
   border-radius: 3px;
   border: none;
-  background: #1b95e0;
+  background: rgb(27, 149, 224);
   cursor: pointer;
+  position: relative;
+}
+
+#tw-btn:hover {
+  background: rgb(0, 102, 177);
 }
 
 .fab {
   color: #fff;
   font-size: 13px;
+  position: absolute;
+  top: 5px;
+  left: 8px;
 }
 
 #tw-btn a{
-  display: inline;
+  position: absolute;
+  top: 2px;
+  left:  10px;
+  width: 75px;
+  height: 22px;
+  display: block;
   color: #fff;
   text-decoration: none;
   font-size: 11px;
@@ -255,7 +268,7 @@ textarea[type="text"] {
 }
 
 #graduate:hover {
-  background: rgb(200, 120, 120);
+  background: rgb(220, 100, 100);
 }
 
 .option-btn + .option-btn {
@@ -289,7 +302,6 @@ textarea[type="text"] {
 .utility-btn a:hover {
   color: #000;
 }
-
 
 
 /* 開発検証用 */
